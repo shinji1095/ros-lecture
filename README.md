@@ -22,19 +22,19 @@ https://developers.line.biz/en/services/messaging-api/
 # How to
 Please open a new terminal in each block.
 
-1st
+1st  
 turtle_mode  
 roscore
 
-2nd
+2nd  
 ssh -YC turtle@192.168.11.2  
 roslaunch ros_lecture bringup.launch
 
-3rd
+3rd  
 turtle_mode  
 roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/ros/map.yaml
 
-4th
+4th  
 turtle_mode  
 source ~/ros_ws/competition_ws/devel/setup.bash  
 rosrun competition_pkg main.py 
