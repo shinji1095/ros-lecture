@@ -1,0 +1,30 @@
+1st
+turtle_mode
+roscore
+
+2nd
+ssh -YC turtle@192.168.11.2
+roslaunch ros_lecture bringup.launch
+
+3rd
+turtle_mode
+roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/ros/map.yaml
+
+4
+turtle_mode
+source ~/ros_ws/competition_ws/devel/setup.bash
+rosrun competition_pkg main.py 
+
+
+
+NEW MAP
+turtle_mode
+roslaunch turtlebot3_slam turtlebot3_slam.launch
+
+turtle_mode
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
+turtle_mode
+rosrun map_server map_saver
+roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/ros/map.yaml
+

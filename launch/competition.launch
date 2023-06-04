@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
+    <arg name="map_file" value="/home/ros/map.yaml"/>
+  </include>
+  <node pkg="smach_viewer" type="smach_viewer.py" name="smach_viewer" />
+  <node pkg="competition_pkg" type="sm_main.py" name="sm_main" output="screen"/>
+</launch>
